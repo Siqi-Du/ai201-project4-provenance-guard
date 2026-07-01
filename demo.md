@@ -6,7 +6,7 @@ Here are the exact `curl` commands to copy and paste during the video presentati
 ```bash
 curl -s -X POST http://localhost:5001/submit \
   -H "Content-Type: application/json" \
-  -d '{"text": "Artificial intelligence represents a transformative paradigm shift in modern society. It is important to note that while the benefits of AI are numerous, it is equally essential to consider the ethical implications. Furthermore, stakeholders across various sectors must collaborate to ensure responsible deployment.", "creator_id": "demo-ai"}' | python3 -m json.tool
+  -d '{"text": "Artificial intelligence is a powerful tool for modern human society. It can automate many routine tasks for modern human society. This technology will create new jobs for modern human society. However, it requires careful regulation in modern human society.", "creator_id": "demo-ai"}' | python3 -m json.tool
 ```
 
 ### 2. Submit Human-Written Text (Expected: Low Score, Verified Original)
