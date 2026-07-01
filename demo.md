@@ -28,3 +28,8 @@ curl -s -X POST http://localhost:5001/appeal \
 ```bash
 curl -s -X GET http://localhost:5001/log | python3 -m json.tool
 ```
+
+### 5. Test Rate Limiter (Expected: 10x 200 OK, then 429 Too Many Requests)
+```bash
+for i in $(seq 1 12); do curl -s -o /dev/null -w "%{http_code}\n" -X POST http://localhost:5001/submit -H "Content-Type: application/json" -d '{"text": "Rate limit test.", "creator_id": "test"}'; done
+```
